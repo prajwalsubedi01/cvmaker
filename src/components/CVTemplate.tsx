@@ -8,7 +8,7 @@ interface CVTemplateProps {
   onImageUpload: (e: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
-const CVTemplate: React.FC<CVTemplateProps> = ({ data, onImageUpload }) => {
+const CVTemplate: React.FC<CVTemplateProps> = ({ data}) => {
   const cvRef = useRef<HTMLDivElement>(null);
 
  const handleDownloadPDF = async () => {
