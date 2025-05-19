@@ -11,5 +11,7 @@
   skills: string;
   projects?: string;
   certifications?: string;
-}
+    languages?: string;
+    linkedin?: string;
+};
 export default CVData;
