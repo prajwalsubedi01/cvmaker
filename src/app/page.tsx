@@ -69,7 +69,6 @@ export default function Home() {
               <div className="border border-gray-200 rounded-lg overflow-hidden">
                 <CVTemplate 
                   data={cvData} 
-                  onImageUpload={handleImageUpload}
                 />
               </div>
             </div>

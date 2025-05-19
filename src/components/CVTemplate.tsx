@@ -1,14 +1,14 @@
 import { useRef } from 'react';
 import html2canvas from 'html2canvas';
 import jsPDF from 'jspdf';
+import Image from 'next/image';
 import CVData from "@/types/CVData";
 
 interface CVTemplateProps {
   data: CVData;
-  onImageUpload: (e: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
-const CVTemplate: React.FC<CVTemplateProps> = ({ data}) => {
+const CVTemplate: React.FC<CVTemplateProps> = ({ data }) => {
   const cvRef = useRef<HTMLDivElement>(null);
 
  const handleDownloadPDF = async () => {
@@ -140,9 +140,11 @@ const CVTemplate: React.FC<CVTemplateProps> = ({ data}) => {
             <div className="flex flex-col md:flex-row items-start md:items-center gap-6 mb-8">
               {data.image ? (
                 <div className="w-32 h-32 rounded-full overflow-hidden border-4 border-blue-100">
-                  <img
+                  <Image
                     src={data.image}
                     alt="Profile"
+                    width={128}
+                    height={128}
                     className="w-full h-full object-cover"
                   />
                 </div>
